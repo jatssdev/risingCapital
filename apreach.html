@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particles Over Video Background</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/responsive.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header class="header" id="header">
+        <nav class="navbar container">
+            <section class="navbar__left">
+                <a href="/" class="brand">
+                    <img src="./assets/logo.png" alt="">
+                </a>
+                <div class="burger" id="burger">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </div>
+            </section>
+            <section class="navbar__center">
+                <span class="overlay"></span>
+                <div class="menu" id="menu">
+                    <div class="menu__header">
+                        <span class="menu__arrow"><i class="bx bx-chevron-left"></i></span>
+                        <span class="menu__title"></span>
+                    </div>
+                    <ul class="menu__inner">
+                        <li class="menu__item"><a href="#" class="menu__link">Approach</a></li>
+
+                        <li class="menu__item menu__dropdown">
+                            <a href="#" class="menu__link">
+                                People
+                                <i class="bx bx-chevron-right"></i>
+                            </a>
+                            <div class="submenu megamenu__normal">
+                                <ul class="submenu__list">
+                                    <li><a href="./people-leadership.html">Leadership</a></li>
+                                    <li><a href="./people-Investment.html">Investment Professionals</a></li>
+                                    <li><a href="./people-technology.html">Technology</a></li>
+                                    <li><a href="./people-core.html">Core Infrastructure</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu__item menu__dropdown">
+                            <a href="#" class="menu__link">
+                                Careers
+                                <i class="bx bx-chevron-right"></i>
+                            </a>
+                            <div class="submenu megamenu__normal">
+                                <ul class="submenu__list">
+                                    <li><a href="#">Life at Millennium</a></li>
+                                    <li><a href="#">Students</a></li>
+                                    <li><a href="#">Jobs</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link">Global Presence</a></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="navbar__right">
+                <button class="switch" id="switch">
+                    <span class="switch__light"><i class="bx bx-sun"></i></span>
+                    <span class="switch__dark"><i class="bx bx-moon"></i></span>
+                </button>
+            </section>
+        </nav>
+    </header>
+
+    <style>
+        section.approach .first {
+            display: grid;
+            align-items: center;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        section.approach .first h1 {
+            font-size: 40px;
+            color: var(--primary);
+        }
+
+        section.approach {
+            padding: 100px;
+            /* background-color: red; */
+        }
+
+        section.approach .first video {
+            width: 100%;
+        }
+    </style>
+    <section class="approach">
+        <div class="first">
+            <h1>Independent decisions,
+                collaborative culture,
+                united mission</h1>
+            <div class="viode">
+                <video src="./assets/heroVideo2.mp4"></video>
+            </div>
+        </div>
+    </section>
+    <style>
+        section.map .first {
+            display: grid;
+            align-items: center;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        section.map .firts h1 {
+            font-size: 40px;
+        }
+
+        .content {
+            height: 40vh;
+        }
+    </style>
+    <section class="map">
+        <div class="first">
+            <div class="viode">
+                <video src="./assets/videos/map.mp4" autoplay loop muted></video>
+            </div>
+            <div class="content">
+
+            </div>
+        </div>
+    </section>
+
+    <section class="accordionSection">
+        <div class="main">
+            <h1>Entrepreneurial investing at scale</h1>
+            <p>Millennium seeks to empower talented professionals with the sophisticated expertise, resources and
+                technology to pursue high-quality returns for investors.</p>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-item-header">
+                        Commited to consistency and stability
+                    </div><!-- /.accordion-item-header -->
+                    <div class="accordion-item-body">
+                        <div class="accordion-item-body-content">
+
+                            <p> We aim to deliver consistent high-quality returns over the long-term for our investors
+                                through a rigorous risk framework, adaptive business model and capital stability.</p>
+                            <h3>35+</h3>
+                            <p class="line">YEARS OF EVOLUTION</p>
+                        </div>
+
+                    </div><!-- /.accordion-item-body -->
+                </div><!-- /.accordion-item -->
+            </div>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-item-header">
+                        Scale and reach
+                    </div><!-- /.accordion-item-header -->
+                    <div class="accordion-item-body">
+                        <div class="accordion-item-body-content">
+
+                            <p>We believe Millennium’s scale enables us to access global opportunities and leverage the
+                                resources and infrastructure to deliver high-quality results.</p>
+                            <div class="numbs">
+                                <div>
+                                    <h3>100+</h3>
+                                    <p class="line">GLOBAL EXCHANGES</p>
+                                </div>
+                                <div>
+                                    <h3>45+</h3>
+                                    <p class="line">CURRENCIES TRADED IN</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /.accordion-item-body -->
+                </div><!-- /.accordion-item -->
+            </div>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-item-header">
+                        Specialization and experties
+                    </div><!-- /.accordion-item-header -->
+                    <div class="accordion-item-body">
+                        <div class="accordion-item-body-content">
+                            <p>We believe Millennium’s subject-matter expertise helps us continuously evolve, remain
+                                nimble and manage risk as we explore new markets, technologies and strategies with
+                                discipline and focus.</p>
+                            <div class="numbs">
+                                <div>
+                                    <h3>18+</h3>
+                                    <p class="line">PRIMARY OFFICE LOCATIONS</p>
+                                </div>
+                                <div>
+                                    <h3>40%</h3>
+                                    <p class="line">OF EMPLOYEES HOLD AN ADVANCED DEGREE</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /.accordion-item-body -->
+                </div><!-- /.accordion-item -->
+            </div>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-item-header">
+                        Deep investment in technology </div><!-- /.accordion-item-header -->
+                    <div class="accordion-item-body">
+                        <div class="accordion-item-body-content">
+                            <p>We equip our employees with the latest technology, advanced tools and extensive resources
+                                with the goal of making us faster, more resilient and more effective.</p>
+                            <div class="numbs">
+                                <div>
+                                    <h3>12M+</h3>
+                                    <p class="line">DAILY AVERAGE TRADES</p>
+                                </div>
+                                <div>
+                                    <h3>850K+</h3>
+                                    <p class="line">DAILY DATA FILES INGESTED</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /.accordion-item-body -->
+                </div><!-- /.accordion-item -->
+            </div>
+        </div>
+    </section>
+    <section class="imagecontent">
+        <div>
+            <h2>We are differentiated by our scale, level of specialization and entrepreneurial culture. This
+                combination
+                enables Millennium to pursue opportunities and remain nimble.</h2>
+            <h3>Ajay Nagpal</h3>
+            <p>President and Chief Operating Officer</p>
+        </div>
+    </section>
+
+
+    <section class="trading-strategies-section">
+        <div class="container">
+            <h2>Broad, diverse trading strategies</h2>
+            <p>Millennium participates in major markets around the world and works to continually evaluate new
+                strategies that
+                fit our risk and return characteristics. We work to maintain agility at scale, which enables us to
+                pursue new
+                investment opportunities in a meaningful way.</p>
+            <div class="trading-strategies">
+                <div class="strategy-box">
+                    <h3>Fundamental Equity</h3>
+                    <p>Conduct fundamental research on companies both as a generalist and specialist within a particular
+                        sector or
+                        sub-sector.</p>
+                    <hr>
+                </div>
+                <div class="strategy-box">
+                    <h3>Equity Arbitrage</h3>
+                    <p>Pursue a variety of systematic and fundamental arbitrage strategies across different parts of a
+                        company’s
+                        capital structure and a variety of derivatives.</p>
+                    <hr>
+                </div>
+                <div class="strategy-box">
+                    <h3>Fixed Income</h3>
+                    <p>Manage various strategies such as rates, macro, credit, mortgages and asset-backed securities</p>
+                    <hr>
+                </div>
+                <div class="strategy-box">
+                    <h3>Commodities</h3>
+                    <p>Deploy a range of investment strategies across energy, metals, agricultural and soft commodities
+                        markets.
+                    </p>
+                    <hr>
+                </div>
+                <div class="strategy-box">
+                    <h3>Quantitative Strategies</h3>
+                    <p>Build and enhance investment processes that are primarily systematically driven and focused on a
+                        variety of
+                        asset classes.
+                    </p>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="fotterWrapper">
+        <div class="fwrap">
+            <div class="fImg">
+                <img src="./assets/logo-white.png" alt="" />
+            </div>
+
+            <div class="links">
+                <p><a href="">Our Teams</a></p>
+                <p><a href="">What we do</a></p>
+                <p><a href="">Careers</a></p>
+                <p><a href="">New and Insights</a></p>
+            </div>
+        </div>
+
+        <div class="fNav">
+            <ul>
+                <li>Privacy</li>
+                <li>Terms of use</li>
+                <li>careers</li>
+                <li>News and sights</li>
+            </ul>
+            <div class="copyRight">
+                <p>
+                    Copyright © Citadel Enterprise Americas LLC or one of its
+                    affiliates. All rights reserved.
+                </p>
+            </div>
+            <div class="icons">
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+        </div>
+    </footer>
+    <!-- <div class="dummy" style="height: 100vh; background-color: white; position: relative;z-index: 10"></div> -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/simplex-noise@2.4.0/simplex-noise.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.18.3/dist/tsparticles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

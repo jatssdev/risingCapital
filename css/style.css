@@ -140,7 +140,7 @@ img {
 }
 
 .container {
-    max-width: 75rem;
+    /* max-width: 75rem; */
     height: auto;
     margin-inline: auto;
     padding-inline: 1.5rem;
@@ -1636,4 +1636,190 @@ section .videos .arrows svg {
     font-weight: 400;
     color: var(--primary);
     font-size: 45px;
+}
+
+
+/* .accordion start  */
+
+section.accordionSection .main {
+    padding: 100px;
+}
+
+section.accordionSection .main h1 {
+    font-size: 40px;
+    text-align: center;
+    color: var(--primary);
+}
+
+section.accordionSection .main>p {
+    text-align: center;
+    margin: 20px 0;
+    color: gray;
+    font-size: 20px;
+}
+
+
+.accordion {
+
+    margin: 1rem auto;
+}
+
+.accordion-item {
+    background-color: #fff;
+    color: var(--primary);
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+}
+
+.accordion-item-header {
+    padding: 2rem 3rem 2rem 1rem;
+    min-height: 3.5rem;
+    line-height: 1.25rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.accordion-item-header::after {
+    content: "\002B";
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+}
+
+.accordion-item-header.active::after {
+    content: "\2212";
+}
+
+.accordion-item-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion-item-body-content {
+    padding: 1rem;
+    line-height: 1.5rem;
+    border-top: 1px solid;
+    border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+}
+
+.accordion-item-body-content>h1 {
+    font-size: 40px;
+}
+
+.accordion-item-body-content .numbs {
+    display: flex;
+    gap: 20px;
+}
+
+
+
+.accordion-item-body-content h3 {
+    font-size: 40px;
+
+}
+
+s .accordion-item-body-content p {
+    margin: 40px 0;
+    font-size: 20px;
+    color: var(--primary) !important;
+
+}
+
+.accordion-item-body-content p.line {
+    border-bottom: 2px solid var(--primary);
+    padding: 10px 0;
+    width: fit-content;
+}
+
+/* .accordion end */
+
+
+/* imagecontent start  */
+section.imagecontent {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    background-image: url('../assets/images/people-investment/IP-Hero-Retouched.jpg');
+}
+
+section.imagecontent>div {
+    width: 50%;
+    color: white;
+}
+
+section.imagecontent>div h2 {
+    font-size: 35px;
+}
+
+section.imagecontent>div h3 {
+    font-size: 25px;
+    margin-top: 30px;
+}
+
+section.imagecontent>div p {
+    font-size: 20px;
+}
+
+/* imagecontent end */
+
+
+
+
+/* Trading Strategies Section */
+.trading-strategies-section {
+    padding: 100px 0;
+    background-color: white;
+}
+
+.trading-strategies-section .container {
+    text-align: left;
+}
+
+.trading-strategies {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.strategy-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.strategy-box h3 {
+    font-size: 1.3rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.strategy-box p {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.strategy-box hr {
+    border: 0;
+    height: 1px;
+    background: var(--primary);
+    margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+
+    .boxes-container,
+    .trading-strategies {
+        grid-template-columns: 1fr;
+        /* Single column for smaller screens */
+    }
 }
