@@ -1,0 +1,73 @@
+@media screen and (max-width:1000px) {
+    .links {
+        display: none;
+    }
+
+    header .navlinksToggleBtn {
+        display: block;
+    }
+
+    header .navLinksToggle {
+        display: block;
+        position: absolute;
+        /* padding: 10px; */
+        top: 100%;
+        overflow: hidden;
+        left: 0;
+        height: 0;
+        width: 50%;
+        transition: .3s;
+        /* padding: 30px; */
+        background-color: rgb(232, 232, 232);
+    }
+
+    header .navLinksToggle .navRes {
+        padding: 15px;
+    }
+
+    header .navLinksToggle.active {
+        height: 100vh;
+    }
+
+    header .navLinksToggle nav {
+        display: block;
+    }
+
+    header .navLinksToggle .link {
+        width: fit-content;
+        display: block !important;
+        position: static;
+        width: 100%;
+
+    }
+
+    header .navLinksToggle .link>a {
+        width: 100%;
+        background-color: white;
+
+        display: inline-block;
+        padding: 15px;
+        border-bottom: 1px solid var(--primary);
+    }
+
+    header .navLinksToggle .link ul {
+        padding: 10px;
+        list-style-type: none;
+        display: none;
+    }
+
+    header .navLinksToggle .link:hover ul {
+        display: block;
+    }
+
+    header .navLinksToggle .link ul a {
+        width: 100%;
+        background-color: white;
+
+        display: inline-block;
+        padding: 10px;
+        border-bottom: 1px solid var(--primary);
+    }
+
+
+}

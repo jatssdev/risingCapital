@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+.bgJob {
+  background-color: var(--primary);
+  height: 50vh;
+  width: 100%;
+  padding-top: 150px;
+
+}
+
+.bgJob .options {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  padding-left: 60px;
+}
+
+.bgJob .options p a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.options .line {
+  width: 1.5%;
+  height: 2px;
+  background-color: white;
+  transform: rotate(-70deg);
+}
+
+.bgJob div h1 {
+  color: white;
+  font-size: 3.5rem;
+  font-weight: 500;
+  padding-top: 20px;
+  padding-left: 60px;
+}
+
+.section {
+  padding: 60px;
+}
+
+.section div strong {
+  font-weight: bolder;
+  font-size: 18px;
+  color: rgb(121, 121, 121);
+}
+
+.section div p {
+  font-size: 20px;
+  color: rgb(65, 65, 65);
+  color: grey;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.section-lines {
+  padding: 40px 60px;
+  background: #f6f6f7;
+}
+
+.section-lines .row {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 0;
+  border-bottom: 1px solid grey;
+}
+
+.section-lines .row .rowCont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row .rowCont div h3 {
+  color: var(--primary);
+  font-size: 21px;
+  position: relative;
+  overflow: hidden;
+}
+
+.row:first-child p {
+  color: grey;
+  font-size: 18px;
+  padding-top: 10px;
+}
+
+.row .rowCont div h3::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: -1000px;
+  background-color: var(--primary);
+  transition: 0.6s;
+}
+
+.row .rowCont div h3:hover::after {
+  left: 0;
+}
+
+.row .rowCont div a {
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--primary);
+}
+
+.row .rowCont div p {
+  color: grey;
+  font-size: 18px;
+  padding-top: 10px;
+}
+
+@media screen and (max-width: 990px) {
+  .section-lines {
+    padding: 20px;
+    background: #f6f6f7;
+  }
+
+  .section-lines .row {
+    height: 40vh;
+  }
+
+  .section-lines .row .rowCont {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .row .rowCont div {
+    padding: 10px 0;
+  }
+
+  .row:first-child {
+    height: 20vh;
+  }
+
+  .row .rowCont div p {
+    font-size: 15px;
+  }
+
+  .row .rowCont div a {
+    font-size: 15px;
+  }
+
+  .row .rowCont div h3 {
+    font-size: 18px;
+  }
+
+  .section {
+    padding: 50px 20px;
+  }
+
+  .bgJob .options {
+    padding-left: 20px;
+  }
+
+  .bgJob .options p a {
+    font-size: 20px;
+
+  }
+
+  .bgJob div h1 {
+    font-size: 3rem;
+    padding-left: 20px;
+  }
+
+  .bgJob {
+    width: 100%;
+    height: 60vh;
+
+  }
+
+  .bgJob .options {
+    gap: 20px;
+  }
+
+  .bgJob .line {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .bgJob {
+    width: 100%;
+    height: 70vh;
+
+    background-size: cover;
+  }
+
+  .bgJob div h1 {
+    font-size: 2.5rem;
+    padding-left: 20px;
+  }
+
+  .section {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+
+  .bgJob .options {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .bgJob .line {
+    display: none;
+  }
+}
