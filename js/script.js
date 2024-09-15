@@ -1,8 +1,5 @@
-/* ---- particles.js config ---- */
-
-// header start 
+// header 
 const menu = document.querySelector(".menu");
-const header = document.querySelector("#header");
 const menuInner = menu.querySelector(".menu__inner");
 const menuArrow = menu.querySelector(".menu__arrow");
 const menuTitle = menu.querySelector(".menu__title");
@@ -11,35 +8,32 @@ const overlay = document.querySelector(".overlay");
 
 // Navbar Menu Toggle Function
 function toggleMenu() {
+
+    header.classList.toggle("is-active");
     menu.classList.toggle("is-active");
     overlay.classList.toggle("is-active");
-    header.classList.toggle("is-active");
 }
 
 // Show Mobile Submenu Function
 function showSubMenu(children) {
-    let subMenu = children.querySelector(".submenu");
-    if (subMenu) {
-        subMenu.classList.add("is-active");
-        subMenu.style.animation = "slideLeft 0.35s ease forwards";
-        const titleText = children.querySelector(".menu__link").textContent.trim();
-        menuTitle.textContent = titleText;
-        menu.querySelector(".menu__header").classList.add("is-active");
-    }
+    subMenu = children.querySelector(".submenu");
+    subMenu.classList.add("is-active");
+    subMenu.style.animation = "slideLeft 0.35s ease forwards";
+    const menuTitle = children.querySelector("i").parentNode.childNodes[0]
+        .textContent;
+    menu.querySelector(".menu__title").textContent = menuTitle;
+    menu.querySelector(".menu__header").classList.add("is-active");
 }
 
 // Hide Mobile Submenu Function
 function hideSubMenu() {
-    let subMenu = menu.querySelector(".submenu.is-active");
-    if (subMenu) {
-        subMenu.style.animation = "slideRight 0.35s ease forwards";
-        setTimeout(() => {
-            subMenu.classList.remove("is-active");
-        }, 300);
+    subMenu.style.animation = "slideRight 0.35s ease forwards";
+    setTimeout(() => {
+        subMenu.classList.remove("is-active");
+    }, 300);
 
-        menuTitle.textContent = "";
-        menu.querySelector(".menu__header").classList.remove("is-active");
-    }
+    menu.querySelector(".menu__title").textContent = "";
+    menu.querySelector(".menu__header").classList.remove("is-active");
 }
 
 // Toggle Mobile Submenu Function
@@ -61,7 +55,6 @@ window.addEventListener("resize", () => {
         }
     }
 });
-
 
 // Dark and Light Mode with localStorage
 (function () {
@@ -102,7 +95,8 @@ menuArrow.addEventListener("click", hideSubMenu);
 menuTitle.addEventListener("click", hideSubMenu);
 menuInner.addEventListener("click", toggleSubMenu);
 
-// header end
+// header 
+/* ---- particles.js config ---- */
 
 
 particlesJS("particles-js", {
@@ -220,6 +214,237 @@ particlesJS("particles-js", {
     "retina_detect": true
 });
 
+
+particlesJS("particles-js-People", {
+    "particles": {
+        "number": {
+            "value": 40,
+            "density": {
+                "enable": true,
+                "value_area": 800
+            }
+        },
+        "color": {
+            "value": "#961043" // Changed to blue
+        },
+        "shape": {
+            "type": "circle",
+            "stroke": {
+                "width": 0,
+                "color": "#000000"
+            },
+            "polygon": {
+                "nb_sides": 5
+            },
+            "image": {
+                "src": "img/github.svg",
+                "width": 100,
+                "height": 100
+            }
+        },
+        "opacity": {
+            "value": 0.5,
+            "random": false,
+            "anim": {
+                "enable": false,
+                "speed": 1,
+                "opacity_min": 0.1,
+                "sync": false
+            }
+        },
+        "size": {
+            "value": 3,
+            "random": true,
+            "anim": {
+                "enable": false,
+                "speed": 40,
+                "size_min": 0.1,
+                "sync": false
+            }
+        },
+        "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#961043", // Changed to blue
+            "opacity": 0.4,
+            "width": 1
+        },
+        "move": {
+            "enable": true,
+            "speed": 6,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+            }
+        }
+    },
+    "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+            "onhover": {
+                "enable": true,
+                "mode": "bubble"
+            },
+            "onscroll": {
+                "enable": true,
+                "mode": "push"
+            },
+            "onclick": {
+                "enable": true,
+                "mode": "push"
+            },
+            "resize": true
+        },
+        "modes": {
+            "grab": {
+                "distance": 140,
+                "line_linked": {
+                    "opacity": 1
+                }
+            },
+            "bubble": {
+                "distance": 400,
+                "size": 40,
+                "duration": 2,
+                "opacity": 8,
+                "speed": 3
+            },
+            "repulse": {
+                "distance": 200,
+                "duration": 0.4
+            },
+            "push": {
+                "particles_nb": 4
+            },
+            "remove": {
+                "particles_nb": 2
+            }
+        }
+    },
+    "retina_detect": true
+});
+
+particlesJS("particles-js-leadership", {
+    "particles": {
+        "number": {
+            "value": 100,
+            "density": {
+                "enable": true,
+                "value_area": 800
+            }
+        },
+        "color": {
+            "value": "#961043" // Changed to blue
+        },
+        "shape": {
+            "type": "circle",
+            "stroke": {
+                "width": 0,
+                "color": "#000000"
+            },
+            "polygon": {
+                "nb_sides": 5
+            },
+            "image": {
+                "src": "img/github.svg",
+                "width": 100,
+                "height": 100
+            }
+        },
+        "opacity": {
+            "value": 0.5,
+            "random": false,
+            "anim": {
+                "enable": false,
+                "speed": 1,
+                "opacity_min": 0.1,
+                "sync": false
+            }
+        },
+        "size": {
+            "value": 3,
+            "random": true,
+            "anim": {
+                "enable": false,
+                "speed": 40,
+                "size_min": 0.1,
+                "sync": false
+            }
+        },
+        "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#961043", // Changed to blue
+            "opacity": 0.4,
+            "width": 1
+        },
+        "move": {
+            "enable": true,
+            "speed": 6,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+            }
+        }
+    },
+    "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+            "onhover": {
+                "enable": true,
+                "mode": "repulse"
+            },
+            "onscroll": {
+                "enable": true,
+                "mode": "push"
+            },
+            "onclick": {
+                "enable": true,
+                "mode": "push"
+            },
+            "resize": true
+        },
+        "modes": {
+            "grab": {
+                "distance": 140,
+                "line_linked": {
+                    "opacity": 1
+                }
+            },
+            "bubble": {
+                "distance": 400,
+                "size": 40,
+                "duration": 2,
+                "opacity": 8,
+                "speed": 3
+            },
+            "repulse": {
+                "distance": 200,
+                "duration": 0.4
+            },
+            "push": {
+                "particles_nb": 4
+            },
+            "remove": {
+                "particles_nb": 2
+            }
+        }
+    },
+    "retina_detect": true
+});
+
 $(document).ready(function () {
     var swiper = new Swiper(".swiper-container-h", {
         direction: "horizontal",
@@ -268,14 +493,39 @@ $(document).ready(function () {
             enabled: true,
             onlyInViewport: true,
         },
-        slidesPerView: 3,
-        spaceBetween: 40,
+        slidesPerView: 3, // Default value for large screens
+        spaceBetween: 40, // Default value for large screens
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev"
         },
         effect: 'slide',
+
+        // Add breakpoints for responsive behavior
+        breakpoints: {
+            // when window width is >= 1200px
+            1200: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            },
+            // when window width is >= 992px (large tablets)
+            800: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            // when window width is >= 768px (tablets)
+            768: {
+                slidesPerView: 1,
+                spaceBetween: 20
+            },
+            // when window width is < 768px (mobile phones)
+            350: {
+                slidesPerView: 1,
+                spaceBetween: 10
+            }
+        }
     });
+
     // var swiper = new Swiper(".swiper-container-h1", {
     //     direction: "horizontal",
     //     effect: "slide",
@@ -401,31 +651,3 @@ $(document).ready(function () {
 
 });
 
-
-
-// accordion start
-const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
-
-accordionItemHeaders.forEach(accordionItemHeader => {
-    accordionItemHeader.addEventListener("click", event => {
-
-        // Uncomment in case you only want to allow for the display of only one collapsed item at a time!
-
-        //     const currentlyActiveAccordionItemHeader = document.querySelector(".accordion-item-header.active");
-        //     if(currentlyActiveAccordionItemHeader && currentlyActiveAccordionItemHeader!==accordionItemHeader) {
-        //        currentlyActiveAccordionItemHeader.classList.toggle("active");
-        //        currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
-        //      }
-
-        accordionItemHeader.classList.toggle("active");
-        const accordionItemBody = accordionItemHeader.nextElementSibling;
-        if (accordionItemHeader.classList.contains("active")) {
-            accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
-        }
-        else {
-            accordionItemBody.style.maxHeight = 0;
-        }
-
-    });
-});
-// accordion end

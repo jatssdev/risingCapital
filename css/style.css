@@ -8,7 +8,20 @@
     --primary: #961043;
 }
 
-/* header start  */
+
+#field {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background-color: white;
+    /* Above particles */
+
+}
+
+/* header  */
 :root {
     --shadow-small: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
         0 1px 2px 0 rgba(0, 0, 0, 0.06);
@@ -16,7 +29,7 @@
         0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --shadow-large: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
         0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --color: #3d051b;
+    --color: #c7232f;
     --color2: #161d27;
     --color2-dark: #0f131a;
 }
@@ -37,7 +50,7 @@
 
 html {
     scroll-behavior: smooth;
-    /* height: -webkit-fill-available; */
+    height: -webkit-fill-available;
 }
 
 body {
@@ -140,7 +153,7 @@ img {
 }
 
 .container {
-    /* max-width: 75rem; */
+    max-width: 75rem;
     height: auto;
     margin-inline: auto;
     padding-inline: 1.5rem;
@@ -156,18 +169,17 @@ img {
     position: fixed;
     top: 0;
     left: 0;
+    transition: .5s;
     width: 100%;
-
     height: 100px;
     z-index: 100;
-    transition: .5s;
     margin: 0 auto;
     background-color: white;
-    /* box-shadow: var(--shadow-medium); */
+    box-shadow: var(--shadow-medium);
 }
 
 .header.is-active {
-    height: 100vh !important;
+    height: 100vh;
 }
 
 .header img {
@@ -396,7 +408,7 @@ img {
     cursor: pointer;
     font-size: 20px;
     font-weight: 500;
-    color: var(--primary);
+    color: #000;
     text-transform: capitalize;
     transition: all 0.25s ease;
 }
@@ -586,14 +598,13 @@ img {
     padding: 10px 0;
     line-height: 1.4;
     text-transform: capitalize;
-    color: var(--primary);
+    color: #000;
     transition: all 0.25s ease-in-out;
 }
 
 .submenu .submenu__list li a:hover {
     color: var(--color);
 }
-
 
 @media (max-width: 766px) {
     .submenu .submenu__list li a {
@@ -726,22 +737,7 @@ img {
     top: 16px;
 }
 
-/* header end */
-
-#field {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    background-color: white;
-    /* Above particles */
-
-}
-
-
-
+/* header  */
 .arrow-container {
     display: inline-block;
     font-size: 30px;
@@ -1317,6 +1313,10 @@ section .videos .videoModel .closebtn svg {
     font-size: 60px;
 }
 
+.swiper-container-h .swiper-button-next:hover,
+.swiper-container-h .swiper-button-prev:hover {
+    /* background: #FFFFFF0D; */
+}
 
 section .videos .arrows {
     position: absolute;
@@ -1432,6 +1432,7 @@ section .videos .arrows svg {
 
 }
 
+
 .heroCareer .careers h1 span {
     color: var(--primary);
     margin-left: 80px;
@@ -1450,7 +1451,6 @@ section .videos .arrows svg {
 
 .fotterWrapper .fwrap {
     display: flex;
-    /* align-items: center; */
     justify-content: space-between;
 }
 
@@ -1472,7 +1472,7 @@ section .videos .arrows svg {
 
 
 .fwrap .fImg img {
-    width: 150px;
+    width: 200px;
     padding-top: 10px;
 
 }
@@ -1481,7 +1481,7 @@ section .videos .arrows svg {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+
     padding: 20px 0;
     color: white;
     border-top: 1px solid grey;
@@ -1492,7 +1492,6 @@ section .videos .arrows svg {
 .fNav ul {
     display: flex;
     gap: 20px;
-    flex-wrap: wrap;
 }
 
 .fNav ul li {
@@ -1544,7 +1543,7 @@ section .videos .arrows svg {
     justify-content: space-between;
     align-items: center;
     color: white;
-    height: 40vh;
+    min-height: 40vh;
     background-color: var(--primary);
 }
 
@@ -1626,6 +1625,7 @@ section .videos .arrows svg {
     background-color: white;
     margin: 0 auto;
     border-radius: 10px;
+    min-height: 300px;
     width: 70%;
     padding: 50px;
 }
@@ -1639,187 +1639,69 @@ section .videos .arrows svg {
 }
 
 
-/* .accordion start  */
+@media screen and (max-width:1500px) {
+    .heroCareer .careers h1 {
+        font-size: 3rem;
 
-section.accordionSection .main {
-    padding: 100px;
+
+    }
+
+    .heroCareer .careers {
+        gap: 50px;
+    }
 }
 
-section.accordionSection .main h1 {
-    font-size: 40px;
-    text-align: center;
-    color: var(--primary);
-}
-
-section.accordionSection .main>p {
-    text-align: center;
-    margin: 20px 0;
-    color: gray;
-    font-size: 20px;
-}
+@media screen and (max-width:1200px) {
+    .heroCareer .careers h1 {
+        font-size: 2rem;
 
 
-.accordion {
+    }
 
-    margin: 1rem auto;
-}
+    .hero .content h1 {
+        font-size: 3rem;
+    }
 
-.accordion-item {
-    background-color: #fff;
-    color: var(--primary);
-    margin: 1rem 0;
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
-}
-
-.accordion-item-header {
-    padding: 2rem 3rem 2rem 1rem;
-    min-height: 3.5rem;
-    line-height: 1.25rem;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    font-size: 30px;
-    position: relative;
-    cursor: pointer;
-}
-
-.accordion-item-header::after {
-    content: "\002B";
-    font-size: 2rem;
-    position: absolute;
-    right: 1rem;
-}
-
-.accordion-item-header.active::after {
-    content: "\2212";
-}
-
-.accordion-item-body {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-}
-
-.accordion-item-body-content {
-    padding: 1rem;
-    line-height: 1.5rem;
-    border-top: 1px solid;
-    border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
-}
-
-.accordion-item-body-content>h1 {
-    font-size: 40px;
-}
-
-.accordion-item-body-content .numbs {
-    display: flex;
-    gap: 20px;
-}
-
-
-
-.accordion-item-body-content h3 {
-    font-size: 40px;
 
 }
 
-s .accordion-item-body-content p {
-    margin: 40px 0;
-    font-size: 20px;
-    color: var(--primary) !important;
-
-}
-
-.accordion-item-body-content p.line {
-    border-bottom: 2px solid var(--primary);
-    padding: 10px 0;
-    width: fit-content;
-}
-
-/* .accordion end */
-
-
-/* imagecontent start  */
-section.imagecontent {
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    background-image: url('../assets/images/people-investment/IP-Hero-Retouched.jpg');
-}
-
-section.imagecontent>div {
-    width: 50%;
-    color: white;
-}
-
-section.imagecontent>div h2 {
-    font-size: 35px;
-}
-
-section.imagecontent>div h3 {
-    font-size: 25px;
-    margin-top: 30px;
-}
-
-section.imagecontent>div p {
-    font-size: 20px;
-}
-
-/* imagecontent end */
-
-
-
-
-/* Trading Strategies Section */
-.trading-strategies-section {
-    padding: 100px 0;
-    background-color: white;
-}
-
-.trading-strategies-section .container {
-    text-align: left;
-}
-
-.trading-strategies {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.strategy-box {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.strategy-box h3 {
-    font-size: 1.3rem;
-    color: var(--primary);
-    margin-bottom: 10px;
-}
-
-.strategy-box p {
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.strategy-box hr {
-    border: 0;
-    height: 1px;
-    background: var(--primary);
-    margin-top: 20px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-
-    .boxes-container,
-    .trading-strategies {
+@media screen and (max-width:1000px) {
+    .heroCareer .careers {
         grid-template-columns: 1fr;
-        /* Single column for smaller screens */
+        align-items: center;
+    }
+
+    .heroCareer .careers h1 {
+        font-size: 3rem;
+
+
+    }
+
+
+}
+
+@media screen and (max-width:800px) {
+
+
+    .heroCareer .careers h1 {
+        font-size: 2rem;
+
+
+    }
+
+    .hero .content h1 {
+        font-size: 2rem;
+    }
+
+    .heroCareer .careers h1 span {
+        margin-left: 0;
+    }
+
+    .creative-testimonial--slider .numberDetails2 {
+        flex-direction: column;
+    }
+
+    .creative-testimonial--slider .numberDetails2>div {
+        width: 100%;
     }
 }
